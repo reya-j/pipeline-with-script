@@ -26,6 +26,7 @@ resources:
     pointer:
       sourceName: shiptest-rc-ow/pipeline-with-script
       branch: master
+      buildOnPullRequest: true
    
   - name: sample_out_img
     type: image
