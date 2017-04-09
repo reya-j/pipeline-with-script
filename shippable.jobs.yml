@@ -1,0 +1,47 @@
+jobs:
+
+  - name: test_release
+    type: release
+    steps:
+      - IN: test_ship_ver
+      - IN: plv2withscript_runsh
+      - TASK: managed
+        bump: minor
+
+  - name: plv2withscript_runsh
+    type: runSh
+    steps:
+      - IN: test_same_repo 
+      - TASK:
+        - script: IN/test_same_repo/gitRepo/echo.sh 
+    on_success:
+      - script: echo 'succeeded'
+    on_failure:
+      - script: echo 'failed' 
+    
+  - name: build_cli
+    type: runCLI
+    steps:
+      - IN: plv2withscript_runsh
+      - IN: ship_dh_cli
+      - TASK:
+        - script: IN/test_same_repo/gitRepo/echo.sh 
+      - OUT: sample_out_img
+    on_success:
+      - script: echo 'succeeded'
+    on_failure:
+      - script: echo 'failed'   
+
+  - name: test_manifest_dep
+    type: manifest
+    steps:
+      - IN: deploy_img       
+      
+  - name: test_deploy_ddc
+    type: deploy
+    steps:
+      - IN: test_manifest_dep
+      - IN: test_ddc_cluster
+      - IN: test_ddc_dopts
+      - TASK: managed      
+ 
