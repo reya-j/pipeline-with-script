@@ -50,7 +50,13 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
-      
+  - name: editing resources.yml
+    type: image
+    integration: ship-docker
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"     
 #  - name: test_ddc_cluster
 #    type: cluster
 #    integration: ship-ddc
