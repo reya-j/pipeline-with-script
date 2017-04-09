@@ -12,6 +12,7 @@ jobs:
     type: runSh
     steps:
       - IN: test_same_repo 
+      - IN: trigger1
       - TASK:
         - script: IN/test_same_repo/gitRepo/echo.sh 
     on_success:
@@ -24,6 +25,7 @@ jobs:
     steps:
       - IN: plv2withscript_runsh
       - IN: ship_dh_cli
+      - IN: trigger2
       - TASK:
         - script: IN/test_same_repo/gitRepo/echo.sh 
       - OUT: sample_out_img
