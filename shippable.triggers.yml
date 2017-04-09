@@ -1,0 +1,15 @@
+triggers:
+  - name: trigger1
+    type: trigger
+    version:
+      counter: 63
+      
+  - name: trigger2
+    type: trigger
+    version:
+      counter: 427
+
+  - name: trigger3
+    type: trigger
+    version:
+      counter: 0
