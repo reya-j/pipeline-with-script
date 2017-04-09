@@ -1,15 +1,15 @@
 resources:
 
-  - name: ship_ver
+  - name: test_ship_ver
     type: version
     seed:
       versionName: "5.4.2"
       
-  - name: ship_dh
+  - name: test_ship_dh
     type: integration
     integration: "docker"
 
-  - name: ship_dh_cli
+  - name: test_ship_dh_cli
     type: cliConfig
     integration: "docker"
      
@@ -20,7 +20,7 @@ resources:
       sourceName : "test"
       region: "us-east-1"
          
-  - name: test_scriptbase_repo
+  - name: test_same_repo
     type: gitRepo
     integration: github
     pointer:
