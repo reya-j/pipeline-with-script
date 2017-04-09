@@ -50,7 +50,7 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
-  - name: editing resources.yml
+  - name: editing_resources.yml1
     type: image
     integration: ship-docker
     pointer:
