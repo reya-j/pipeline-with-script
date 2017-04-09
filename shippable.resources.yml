@@ -13,12 +13,12 @@ resources:
     type: cliConfig
     integration: "ship-docker"
      
-  - name: test_awsiam_cluster
-    type: cluster
-    integration: "ship-aws_iam"
-    pointer:
-      sourceName : "test"
-      region: "us-east-1"
+ # - name: test_awsiam_cluster
+  #  type: cluster
+  #  integration: "ship-aws_iam"
+  #  pointer:
+   #   sourceName : "test"
+    #  region: "us-east-1"
          
   - name: test_same_repo
     type: gitRepo
