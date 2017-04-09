@@ -13,3 +13,4 @@ build:
   ci:
     - echo "hello world"
     - echo "$COMMITER"
+    - echo "$foo"
