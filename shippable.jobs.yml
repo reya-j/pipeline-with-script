@@ -12,6 +12,7 @@ jobs:
     type: runSh
     steps:
       - IN: test_same_repo 
+      - IN: editing_resources1
       - IN: trigger1
       - TASK:
         - script: IN/test_same_repo/gitRepo/echo.sh 
