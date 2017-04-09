@@ -7,6 +7,14 @@ jobs:
       - IN: plv2withscript_runsh
       - TASK: managed
         bump: minor
+        
+  - name: relsingle
+    type: release
+    steps:
+      - IN: test_ship_ver
+    #  - IN: plv2withscript_runsh
+      - TASK: managed
+        bump: minor      
 
   - name: plv2withscript_runsh
     type: runSh
