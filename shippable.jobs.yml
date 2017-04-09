@@ -37,11 +37,11 @@ jobs:
     steps:
       - IN: deploy_img       
       
-  - name: test_deploy_ddc
-    type: deploy
-    steps:
-      - IN: test_manifest_dep
-      - IN: test_ddc_cluster
-      - IN: test_ddc_dopts
-      - TASK: managed      
+#  - name: test_deploy_ddc
+#    type: deploy
+#    steps:
+ #     - IN: test_manifest_dep
+ #     - IN: test_ddc_cluster
+ #     - IN: test_ddc_dopts
+ #     - TASK: managed      
  
