@@ -7,11 +7,11 @@ resources:
       
   - name: test_ship_dh
     type: integration
-    integration: "docker"
+    integration: "ship-docker"
 
   - name: test_ship_dh_cli
     type: cliConfig
-    integration: "docker"
+    integration: "ship-docker"
      
   - name: test_awsiam_cluster
     type: cluster
@@ -29,7 +29,7 @@ resources:
    
   - name: sample_out_img
     type: image
-    integration: docker
+    integration: ship-docker
     pointer:
       sourceName: "shippabledocker/ship_plv2node"
     seed:
@@ -51,18 +51,18 @@ resources:
     seed:
       versionName: "deploy.1"
       
-  - name: test_ddc_cluster
-    type: cluster
-    integration: ship-ddc
-    pointer:
-      sourceName : "nothing"
+#  - name: test_ddc_cluster
+#    type: cluster
+#    integration: ship-ddc
+#    pointer:
+ #     sourceName : "nothing"
       
-  - name: test_ddc_dopts
-    type: dockerOptions
-    version:
-      memory: 128      
+ # - name: test_ddc_dopts
+  #  type: dockerOptions
+  #  version:
+   #   memory: 128      
 
-  - name: time-trigger1day
-    type: time
-    seed:
-      interval: "1 0 * * *"  
+  #- name: time-trigger1day
+   # type: time
+   # seed:
+    #  interval: "1 0 * * *"  
