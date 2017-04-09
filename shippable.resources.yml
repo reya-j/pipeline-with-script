@@ -24,7 +24,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: shiptest-rc-me/pipeline-with-script
+      sourceName: shiptest-rc-ow/pipeline-with-script
       branch: master
    
   - name: sample_out_img
